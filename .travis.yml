@@ -1,0 +1,19 @@
+language: C
+sudo: required
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install -y bc sudo  build-essential zip curl libstdc++6 git wget python gcc clang libssl-dev repo rsync flex bison
+before_script:
+  - cd $HOME && PATH=~/bin:$PATH
+  - curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+  - chmod a+x ~/bin/repo
+script:
+  - cd $HOME
+  - git config --global user.name "ShanuDey"
+  - git config --global user.email "sd4shanudey@gmail.com"
+  - git config --global color.ui false
+  - git clone https://github.com/akhilnarang/scripts && cd scripts && bash setup/android_build_env.sh && cd ..
+  - mkdir kernel && cd kernel
+  - wget https://raw.githubusercontent.com/X00T-Development/kernel-travis/master/build.sh
+  - source build.sh

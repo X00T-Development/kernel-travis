@@ -2,9 +2,9 @@
 echo "Cloning dependencies"
 git clone --depth=1 -b lineage-16.0 https://github.com/X00T-Development/kernel_asus_sdm660 kernel
 cd kernel
-git clone --depth=1 https://github.com/Haseo97/Clang-10.0.0 clang
-git clone --depth=1 https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9 -b android-9.0.0_r39 stock
-git clone --depth=1 https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9 -b android-9.0.0_r39 stock_32
+git clone --depth=1 -b 10.0.1 https://github.com/sujitroy/clang.git clang
+git clone --depth=1 https://github.com/sujitroy/GCC-4.9.git -b arm64 stock
+git clone --depth=1 https://github.com/sujitroy/GCC-4.9.git -b arm stock_32
 git clone --depth=1 https://github.com/X00T-Development/AnyKernel3 -b master AnyKernel
 echo "Done"
 GCC="$(pwd)/aarch64-linux-android-"

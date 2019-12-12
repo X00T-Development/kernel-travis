@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 echo "Cloning dependencies"
-git clone --depth=1 -b lineage-16.0 https://github.com/X00T-Development/kernel_asus_sdm660 kernel
+git clone --depth=1 -b HMP-fix $repo kernel
 cd kernel
 git clone --depth=1 -b 10.0.1 https://github.com/sujitroy/clang.git clang
 git clone --depth=1 https://github.com/sujitroy/GCC-4.9.git -b arm64 stock
@@ -58,7 +58,7 @@ function zipping() {
     zip -r9 Kernel-X00T-${TANGGAL}.zip *
     cd .. 
 }
-sticker
+# Main
 sendinfo
 compile
 zipping

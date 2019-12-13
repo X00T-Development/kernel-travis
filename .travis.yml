@@ -11,5 +11,5 @@ script:
   - git config --global user.email "sd4shanudey@gmail.com"
   - git config --global color.ui false
   - mkdir kernel && cd kernel
-  - wget https://raw.githubusercontent.com/X00T-Development/kernel-travis/master/build.sh
+  - wget https://raw.githubusercontent.com/X00T-Development/kernel-travis/HMP/build.sh
   - source build.sh

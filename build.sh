@@ -14,8 +14,8 @@ START=$(date +"%s")
 export CONFIG_PATH=$PWD/arch/arm64/configs/X00T_defconfig
 PATH="${PWD}/clang/bin:${PWD}/stock/bin:${PWD}/stock_32/bin:${PATH}"
 export ARCH=arm64
-export KBUILD_BUILD_HOST=Kernel
-export KBUILD_BUILD_USER="root"
+export KBUILD_BUILD_HOST=$myKernel
+export KBUILD_BUILD_USER=Developer
 # Send info plox channel
 function sendinfo() {
     curl -s -X POST "https://api.telegram.org/bot$token/sendMessage" \
@@ -55,7 +55,7 @@ function compile() {
 # Zipping
 function zipping() {
     cd AnyKernel || exit 1
-    zip -r9 Kernel-X00T-${TANGGAL}.zip *
+    zip -r9 ${myKernel}-${TANGGAL}.zip *
     cd .. 
 }
 # Main

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 echo "Cloning dependencies"
-git clone --depth=1 -b HMP-fix $repo kernel || exit 1
+git clone --depth=1 -b gcam-fix $repo kernel || exit 1
 cd kernel
 git clone --depth=1 -b 10.0.1 https://github.com/sujitroy/clang.git clang
 git clone --depth=1 https://github.com/sujitroy/GCC-4.9.git -b arm64 stock

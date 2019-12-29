@@ -2,16 +2,17 @@ language: C
 sudo: required
 
 before_install:
-  - sudo apt-get update
-  - sudo apt-get install -y git zip
+#  - sudo apt-get update
+#  - sudo apt-get install -y git zip
 
 script:
   - echo "pwd="
   - pwd
-  - cd $HOME
-  - git config --global user.name "ShanuDey"
-  - git config --global user.email "sd4shanudey@gmail.com"
-  - git config --global color.ui false
-  - mkdir kernel && cd kernel
- # - wget https://raw.githubusercontent.com/X00T-Development/kernel-travis/HMP/build.sh
-  - source build.sh
+  - ls
+#   - cd $HOME
+#   - git config --global user.name "ShanuDey"
+#   - git config --global user.email "sd4shanudey@gmail.com"
+#   - git config --global color.ui false
+#   - mkdir kernel && cd kernel
+#   - wget https://raw.githubusercontent.com/X00T-Development/kernel-travis/HMP/build.sh
+#   - source build.sh
